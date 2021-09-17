@@ -6,9 +6,15 @@ export default class Palindrom extends Component{
             userInput: '',
             palindrome:""
         }
+        this.update = this.update.bind(this)
     }
+   
     update(){
         //Code here
+        let {userInput, palindrome} = this.state
+        let reverse = userInput.split("").reverse().join("")
+        palindrome = reverse === userInput ? "True" : "False"
+        document.getElementById('palBool').innerText = palindrome
     }
     render() {
         return (
@@ -16,7 +22,7 @@ export default class Palindrom extends Component{
                 <h4>Palindrome</h4>
                 <input className= "inputLine" onChange= {event => this.setState(this.state.userInput = event.target.value)}/>
                 <button className= "confirmationButton"  onClick={this.update}></button>
-                <span className="resultBox" ></span>
+                <span className="resultsBox"  id="palBool"></span>
             </div>
 
 

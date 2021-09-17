@@ -60,8 +60,8 @@ export default class EnO extends Component{
                 <h4>Evens and Odds</h4>
                 <input className='inputLine' value={this.state.userInput} onChange= { event => this.setState({  userInput: event.target.value })}/>
                 <button className='confirmationButton'  onClick = {this.calcArray}></button>
-                <span className='results-box' id="evens"></span>
-                <span className='results-box' id ='odds'></span>
+                <span className='resultsBox' id="evens"></span>
+                <span className='resultsBox' id ='odds'></span>
 
             </div>
         )
